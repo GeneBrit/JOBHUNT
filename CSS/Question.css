@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.Question {
+    width: 450px;
+    height: 980px;
+    position: relative;
+    background: linear-gradient(to bottom, #287126, #57bc69); 
+}
+
+.Background {
+    width: 446.25px;
+    height: 918.95px;
+    position: absolute;
+    left: 432.24px;
+    top: 916.63px;
+    transform: rotate(-180deg);
+    transform-origin: top left;
+}
+
+.User {
+    width: 186px;
+    height: 151px;
+    position: absolute;
+    left: 118px;
+    top: 200px;
+}
+
+.JobHunt {
+    position: absolute;
+    left: 143px;
+    top: 53px;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.Group12 {
+    width: 428.28px;
+    height: 246.14px;
+    position: absolute;
+    left: 0;
+    top: 161px;
+}
+
+.Ellipse1 {
+    width: 222px;
+    height: 214px;
+    position: absolute;
+    left: 95px;
+    top: 32px;
+    background: rgba(30, 30, 30, 0.20);
+    border-radius: 9999px;
+}
+
+.JobHunt11 {
+    width: 424.05px;
+    height: 238.53px;
+    position: absolute;
+    left: 4.30px;
+    top: 0;
+    transform: rotate(1deg);
+    transform-origin: top left;
+}
+
+.HuntForOpportunities {
+    width: 232px;
+    height: 38px;
+    position: absolute;
+    left: 98px;
+    top: 451px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+}
+
+.CreateVacancy {
+    width: 269px;
+    height: 21px;
+    position: absolute;
+    left: 80px;
+    top: 547px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+}
+
+.Button {
+    width: 243px;
+    height: 43px;
+    position: absolute;
+    left: 80px;
+    background: white;
+    border: none;
+    border-radius: 18.3px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+}
+
+.ButtonYes {
+    top: 653px;
+}
+
+.ButtonNo {
+    top: 751px;
+}
+
+.Button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effects */
+.Button:hover {
+    background: #f0f0f0;
+    transition: background 0.3s ease;
+}
