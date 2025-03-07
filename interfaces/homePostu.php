@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Welcome again! Postulante :D</h1>
+    <h1>Hola</h1>
 </body>
 <?php
 require_once 'conexion.php';
