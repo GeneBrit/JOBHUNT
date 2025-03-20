@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql": "^2.18.1"
+  },
+  "name": "jobhunt",
+  "description": "Proyecto JobHunt UTT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeneBrit/JOBHUNT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeneBrit/JOBHUNT/issues"
+  },
+  "homepage": "https://github.com/GeneBrit/JOBHUNT#readme"
+}
