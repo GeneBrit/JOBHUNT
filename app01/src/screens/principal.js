@@ -38,7 +38,7 @@ const PrincipalScreen = ({ navigation }) => {
               Hunt for opportunities, not for jobs.
             </Text>
           </View>
-          
+         
           {/* Sección inferior con botones */}
           <View style={styles.bottomContainer}>
             <TouchableOpacity
@@ -92,15 +92,16 @@ const styles = StyleSheet.create({
     transform: [{ rotate: '1deg' }],
   },
   middleContainer: {
+    position: 'absolute',
+    top: 420, // Ajusta según sea necesario
     width: '80%',
-    justifyContent: 'center',
     alignItems: 'center',
   },
   bottomContainer: {
+    position: 'absolute',
+    bottom: 40, // Asegura que siempre esté en la parte inferior
     width: '100%',
     alignItems: 'center',
-    marginBottom: 40,
-    marginTop: 20,
   },
   button: {
     width: '80%',
