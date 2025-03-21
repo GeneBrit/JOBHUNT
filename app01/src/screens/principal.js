@@ -93,13 +93,13 @@ const styles = StyleSheet.create({
   },
   middleContainer: {
     position: 'absolute',
-    top: 420, // Ajusta según sea necesario
+    top: 420, 
     width: '80%',
     alignItems: 'center',
   },
   bottomContainer: {
     position: 'absolute',
-    bottom: 40, // Asegura que siempre esté en la parte inferior
+    bottom: 40, 
     width: '100%',
     alignItems: 'center',
   },
