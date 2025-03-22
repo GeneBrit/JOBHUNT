@@ -5,6 +5,7 @@ import Principal from './src/screens/principal';
 import SignUpScreen from './src/screens/signup';
 import ElectionScreen from './src/screens/election';
 import LoginScreen from './src/screens/login';
+import HomeWorkerScreen from './src/screens/home';
 
 
 const Stack = createStackNavigator();
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="election" component={ElectionScreen}/>
         <Stack.Screen name="signup" component={SignUpScreen} />
         <Stack.Screen name="login" component={LoginScreen} />
+        <Stack.Screen name="home" component={HomeWorkerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

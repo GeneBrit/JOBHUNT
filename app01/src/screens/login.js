@@ -30,7 +30,7 @@ const LoginScreen = ({ navigation }) => {
       // Simulación de envío al servidor
       console.log('Intentando iniciar sesión con:', { email, password });
       // Aquí podrías navegar a la pantalla principal si el login es exitoso
-      // navigation.navigate('Home');
+      navigation.navigate('home');
     }
   };
 

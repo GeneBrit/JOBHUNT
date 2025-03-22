@@ -19,7 +19,7 @@ const HomeWorkerScreen = ({ navigation }) => {
       {/* Header */}
       <View style={styles.header}>
         <Image 
-          source={require('../images/Logo_JH_B.png')} 
+          source={require('../assets/Logo JH B.png')} 
           style={styles.logoImage}
           resizeMode="contain"
         />
