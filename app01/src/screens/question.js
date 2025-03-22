@@ -1,3 +1,6 @@
+/*Esta pagina solo aparecera cuando sea la primera vez que ingresa un reclutodor a la aplicacion para que lo tengan en cuenta en el BACKEND*/
+
+
 import React from 'react';
 import { 
   View, 

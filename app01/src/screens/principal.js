@@ -52,7 +52,7 @@ const PrincipalScreen = ({ navigation }) => {
             
             <View style={styles.questionContainer}>
               <Text style={styles.questionText}>Do you have an account? </Text>
-              <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+              <TouchableOpacity onPress={() => navigation.navigate('login')}>
                 <Text style={styles.signIn}>sign in</Text>
               </TouchableOpacity>
             </View>

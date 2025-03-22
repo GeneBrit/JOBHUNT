@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-const HomeWorkerScreen = ({ navigation }) => {
+const HomeCapacitorScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#9fc5a0" barStyle="dark-content" />
@@ -27,14 +27,13 @@ const HomeWorkerScreen = ({ navigation }) => {
       </View>
       
       {/* Recommended Tag */}
-      <Text style={styles.recommendedTag}>Reccomended</Text>
+      <Text style={styles.recommendedTag}>you vacancies</Text>
       
       {/* Main Content */}
       <View style={styles.mainContent}>
         <Text style={styles.recommendationTitle}>
-          These are some{'\n'}
-          vacancies that match{'\n'}
-          with your prefences
+          Job vacancies{'\n'}
+          your offer{'\n'}
         </Text>
         
         <TouchableOpacity style={styles.jobCard}>
@@ -51,6 +50,14 @@ const HomeWorkerScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       
+      {/* Floating Action Button */}
+      <TouchableOpacity 
+        style={styles.fabButton}
+        onPress={() => navigation && navigation.navigate('createVac')}
+      >
+        <FontAwesome name="plus" size={24} color="white" />
+      </TouchableOpacity>
+
       {/* Bottom Navigation */}
       <View style={styles.bottomNav}>
         <TouchableOpacity style={[styles.navItem, styles.activeNavItem]}>
@@ -207,6 +214,18 @@ const styles = StyleSheet.create({
   activeNavText: {
     color: '#2f9c36',
   },
+  fabButton: {
+    position: 'absolute',
+    bottom: 70,
+    right: 20,
+    backgroundColor: '#2f9c36',
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 5,
+  },
 });
 
-export default HomeWorkerScreen;
+export default HomeCapacitorScreen;
