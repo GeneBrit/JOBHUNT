@@ -9,16 +9,20 @@ import {
   StatusBar,
   KeyboardAvoidingView,
   Platform,
-  ScrollView
+  ScrollView,
+  useWindowDimensions
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ navigation }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  
+  // Obtener dimensiones de la pantalla
+  const { width, height } = useWindowDimensions();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -31,7 +35,10 @@ const SignUpScreen = () => {
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           style={styles.keyboardAvoidView}
         >
-          <ScrollView contentContainerStyle={styles.scrollView}>
+          <ScrollView 
+            contentContainerStyle={styles.scrollView}
+            showsVerticalScrollIndicator={false}
+          >
             <View style={styles.signupForm}>
               <Text style={styles.title}>Create an account to{'\n'}get started</Text>
               
@@ -94,13 +101,16 @@ const SignUpScreen = () => {
                 />
               </View>
               
-              <TouchableOpacity style={styles.signupButton}>
+              <TouchableOpacity 
+                style={styles.signupButton}
+                onPress={() => navigation?.navigate('login')}
+              >
                 <Text style={styles.buttonText}>Sign up</Text>
               </TouchableOpacity>
               
               <View style={styles.loginLinkContainer}>
                 <Text style={styles.loginText}>Already have an account? </Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation?.navigate('Login')}>
                   <Text style={styles.loginLink}>sign in</Text>
                 </TouchableOpacity>
               </View>
@@ -124,50 +134,49 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     flexGrow: 1,
+    paddingBottom: 20,
   },
   signupForm: {
     padding: 20,
+    alignItems: 'center',
   },
   title: {
-    width: 307,
-    marginVertical: 40,
-    alignSelf: 'center',
+    marginVertical: 30,
     textAlign: 'center',
     color: 'white',
     fontSize: 32,
-    fontFamily: 'Nunito-Bold', // Necesitarás configurar esta fuente
     fontWeight: '700',
+    maxWidth: '90%',
   },
   formGroup: {
-    marginBottom: 20,
+    marginBottom: 16,
+    width: '100%',
+    alignItems: 'center',
   },
   label: {
-    textAlign: 'center',
-    color: 'black',
+    alignSelf: 'flex-start',
+    marginLeft: '10%',
+    color: 'white',
     fontSize: 14,
     fontWeight: '500',
-    lineHeight: 20,
-    letterSpacing: 0.1,
     marginBottom: 5,
   },
   input: {
-    width: 340,
+    width: '90%',
+    maxWidth: 340,
     height: 55,
-    alignSelf: 'center',
-    borderRadius: 23.4043,
+    borderRadius: 23,
     paddingHorizontal: 20,
     backgroundColor: 'white',
     color: 'black',
     fontSize: 14,
     fontWeight: '500',
-    lineHeight: 20,
-    letterSpacing: 0.1,
   },
   signupButton: {
-    width: 232,
+    width: '70%',
+    maxWidth: 232,
     height: 47,
-    marginVertical: 40,
-    alignSelf: 'center',
+    marginVertical: 30,
     backgroundColor: '#185216',
     borderRadius: 20,
     justifyContent: 'center',
@@ -175,27 +184,25 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white',
-    fontSize: 32,
-    fontFamily: 'Nunito-Bold', // Necesitarás configurar esta fuente
+    fontSize: 24,
     fontWeight: '700',
   },
   loginLinkContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 20,
   },
   loginText: {
+    color: 'white',
     fontSize: 14,
     fontWeight: '500',
-    lineHeight: 20,
-    letterSpacing: 0.1,
   },
   loginLink: {
     color: '#2C35DE',
     fontSize: 14,
     fontWeight: '500',
-    lineHeight: 20,
-    letterSpacing: 0.1,
+    textDecorationLine: 'underline',
   },
 });
 
