@@ -30,7 +30,11 @@ const LoginScreen = ({ navigation }) => {
       // Simulación de envío al servidor
       console.log('Intentando iniciar sesión con:', { email, password });
       // Aquí podrías navegar a la pantalla principal si el login es exitoso
+<<<<<<< HEAD
       // navigation.navigate('Home');
+=======
+      navigation.navigate('homeC');
+>>>>>>> Diaz
     }
   };
 
@@ -214,7 +218,11 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   signupLink: {
+<<<<<<< HEAD
     color: '#2C35DE',
+=======
+    color: '#185216',
+>>>>>>> Diaz
     fontSize: 18,
     fontWeight: '700',
     textDecorationLine: 'underline',
