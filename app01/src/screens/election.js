@@ -41,7 +41,7 @@ const ElectionScreen = ({ navigation }) => {
           <View style={styles.buttonsContainer}>
             <TouchableOpacity 
               style={styles.button}
-              onPress={() => navigation?.navigate('JobSearch')}
+              onPress={() => navigation?.navigate('signup')}
             >
               <View style={styles.buttonBackground}>
                 <Text style={styles.buttonText}>Search for a Job</Text>
@@ -50,7 +50,7 @@ const ElectionScreen = ({ navigation }) => {
             
             <TouchableOpacity 
               style={styles.button}
-              onPress={() => navigation?.navigate('EmployeeSearch')}
+              onPress={() => navigation?.navigate('signup')}
             >
               <View style={styles.buttonBackground}>
                 <Text style={styles.buttonText}>Search for employees</Text>
