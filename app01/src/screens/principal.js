@@ -52,7 +52,7 @@ const PrincipalScreen = ({ navigation }) => {
             
             <View style={styles.questionContainer}>
               <Text style={styles.questionText}>Do you have an account? </Text>
-              <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+              <TouchableOpacity onPress={() => navigation.navigate('login')}>
                 <Text style={styles.signIn}>sign in</Text>
               </TouchableOpacity>
             </View>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   signIn: {
-    color: 'white',
+    color: '#2C35DE',
     fontSize: 16,
     fontWeight: 'bold',
     textDecorationLine: 'underline',

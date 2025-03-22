@@ -2,8 +2,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Principal from './src/screens/principal';
-import SignUpScreen from './src/screens/sign up';
+import SignUpScreen from './src/screens/signup';
 import ElectionScreen from './src/screens/election';
+import LoginScreen from './src/screens/login';
 
 
 const Stack = createStackNavigator();
@@ -14,7 +15,8 @@ export default function App() {
       <Stack.Navigator initialRouteName="Principal" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Principal" component={Principal} />
         <Stack.Screen name="election" component={ElectionScreen}/>
-
+        <Stack.Screen name="signup" component={SignUpScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
