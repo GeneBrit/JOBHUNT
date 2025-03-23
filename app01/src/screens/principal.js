@@ -1,20 +1,20 @@
+// PrincipalScreen.js
 import React from 'react';
 import {
   View,
   Text,
   Image,
   TouchableOpacity,
-  StyleSheet,
   SafeAreaView,
   StatusBar,
   useWindowDimensions,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import styles from '../styles/principalStyles'; // Importa los estilos desde el archivo separado
 
 const PrincipalScreen = ({ navigation }) => {
-  // Usar useWindowDimensions hook para obtener dimensiones actualizadas
   const { width, height } = useWindowDimensions();
-  
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
@@ -23,7 +23,6 @@ const PrincipalScreen = ({ navigation }) => {
         style={styles.principal}
       >
         <View style={styles.contentContainer}>
-          {/* Logo */}
           <View style={styles.logoContainer}>
             <Image
               source={require('../assets/Logo JH.png')}
@@ -32,15 +31,25 @@ const PrincipalScreen = ({ navigation }) => {
             />
           </View>
           
-          {/* Sección central con eslogan */}
           <View style={styles.middleContainer}>
             <Text style={styles.eslogan}>
               Hunt for opportunities, not for jobs.
             </Text>
           </View>
          
-          {/* Sección inferior con botones */}
           <View style={styles.bottomContainer}>
+            {/* Google Sign In Button */}
+            <TouchableOpacity
+              style={styles.googleButton}
+              onPress={() => {/* Add Google sign in logic here */}}
+            >
+              <Image 
+                source={require('../assets/icons8-logo-de-google-48.png')} 
+                style={styles.googleIcon}
+              />
+              <Text style={styles.googleButtonText}>Continue with Google</Text>
+            </TouchableOpacity>
+
             <TouchableOpacity
               style={styles.button}
               onPress={() => navigation.navigate('election')}
@@ -63,6 +72,7 @@ const PrincipalScreen = ({ navigation }) => {
   );
 };
 
+<<<<<<< HEAD
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -148,3 +158,6 @@ const styles = StyleSheet.create({
 });
 
 export default PrincipalScreen;
+=======
+export default PrincipalScreen;
+>>>>>>> Diaz

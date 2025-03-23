@@ -1,27 +1,28 @@
+// LoginScreen.js
 import React, { useState } from 'react';
-import { 
-  View, 
-  Text, 
-  Image, 
+import {
+  View,
+  Text,
+  Image,
   TextInput,
-  TouchableOpacity, 
-  StyleSheet, 
+  TouchableOpacity,
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
   StatusBar,
-  useWindowDimensions
+  useWindowDimensions,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import styles from '../styles/loginStyles'; // Importa los estilos desde el archivo separado
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  
+
   // Obtener dimensiones de la pantalla
   const { width, height } = useWindowDimensions();
-  
+
   const handleLogin = () => {
     // Aquí iría la lógica para enviar los datos al servidor
     if (!email || !password) {
@@ -58,7 +59,7 @@ const LoginScreen = ({ navigation }) => {
                 resizeMode="contain"
               />
             </View>
-            
+
             {/* Formulario de login */}
             <View style={styles.loginForm}>
               <View style={styles.formGroup}>
@@ -73,7 +74,7 @@ const LoginScreen = ({ navigation }) => {
                   autoCapitalize="none"
                 />
               </View>
-              
+
               <View style={styles.formGroup}>
                 <Text style={styles.label}>Password</Text>
                 <TextInput
@@ -85,21 +86,21 @@ const LoginScreen = ({ navigation }) => {
                   onChangeText={setPassword}
                 />
               </View>
-              
+
               {error ? (
                 <View style={styles.errorContainer}>
                   <Text style={styles.errorText}>{error}</Text>
                 </View>
               ) : null}
-              
-              <TouchableOpacity 
+
+              <TouchableOpacity
                 style={styles.loginButton}
                 onPress={handleLogin}
               >
                 <Text style={styles.buttonText}>Log in</Text>
               </TouchableOpacity>
             </View>
-            
+
             {/* Link para registro */}
             <View style={styles.signupLinkContainer}>
               <Text style={styles.signupLinkText}>Don't have an account? </Text>
@@ -114,6 +115,7 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
+<<<<<<< HEAD
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -229,4 +231,6 @@ const styles = StyleSheet.create({
   },
 });
 
+=======
+>>>>>>> Diaz
 export default LoginScreen;

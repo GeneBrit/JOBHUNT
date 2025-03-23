@@ -1,18 +1,19 @@
+// SignUpScreen.js
 import React, { useState } from 'react';
-import { 
-  View, 
-  Text, 
-  TextInput, 
-  TouchableOpacity, 
-  StyleSheet, 
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
   SafeAreaView,
   StatusBar,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
-  useWindowDimensions
+  useWindowDimensions,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import styles from '../styles/sigupStyles'; // Importa los estilos desde el archivo separado
 
 const SignUpScreen = ({ navigation }) => {
   const [firstName, setFirstName] = useState('');
@@ -20,7 +21,7 @@ const SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  
+
   // Obtener dimensiones de la pantalla
   const { width, height } = useWindowDimensions();
 
@@ -35,13 +36,13 @@ const SignUpScreen = ({ navigation }) => {
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           style={styles.keyboardAvoidView}
         >
-          <ScrollView 
+          <ScrollView
             contentContainerStyle={styles.scrollView}
             showsVerticalScrollIndicator={false}
           >
             <View style={styles.signupForm}>
               <Text style={styles.title}>Create an account to{'\n'}get started</Text>
-              
+
               <View style={styles.formGroup}>
                 <Text style={styles.label}>First name</Text>
                 <TextInput
@@ -52,7 +53,7 @@ const SignUpScreen = ({ navigation }) => {
                   onChangeText={setFirstName}
                 />
               </View>
-              
+
               <View style={styles.formGroup}>
                 <Text style={styles.label}>Last name</Text>
                 <TextInput
@@ -63,7 +64,7 @@ const SignUpScreen = ({ navigation }) => {
                   onChangeText={setLastName}
                 />
               </View>
-              
+
               <View style={styles.formGroup}>
                 <Text style={styles.label}>E-mail</Text>
                 <TextInput
@@ -76,7 +77,7 @@ const SignUpScreen = ({ navigation }) => {
                   onChangeText={setEmail}
                 />
               </View>
-              
+
               <View style={styles.formGroup}>
                 <Text style={styles.label}>Create a password</Text>
                 <TextInput
@@ -88,7 +89,7 @@ const SignUpScreen = ({ navigation }) => {
                   onChangeText={setPassword}
                 />
               </View>
-              
+
               <View style={styles.formGroup}>
                 <Text style={styles.label}>Confirm your password</Text>
                 <TextInput
@@ -100,8 +101,8 @@ const SignUpScreen = ({ navigation }) => {
                   onChangeText={setConfirmPassword}
                 />
               </View>
-              
-              <TouchableOpacity 
+
+              <TouchableOpacity
                 style={styles.signupButton}
 <<<<<<< HEAD
                 onPress={() => navigation?.navigate('Login')}
@@ -111,7 +112,7 @@ const SignUpScreen = ({ navigation }) => {
               >
                 <Text style={styles.buttonText}>Sign up</Text>
               </TouchableOpacity>
-              
+
               <View style={styles.loginLinkContainer}>
                 <Text style={styles.loginText}>Already have an account? </Text>
 <<<<<<< HEAD
@@ -129,89 +130,5 @@ const SignUpScreen = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  gradient: {
-    flex: 1,
-  },
-  keyboardAvoidView: {
-    flex: 1,
-  },
-  scrollView: {
-    flexGrow: 1,
-    paddingBottom: 20,
-  },
-  signupForm: {
-    padding: 20,
-    alignItems: 'center',
-  },
-  title: {
-    marginVertical: 30,
-    textAlign: 'center',
-    color: 'white',
-    fontSize: 32,
-    fontWeight: '700',
-    maxWidth: '90%',
-  },
-  formGroup: {
-    marginBottom: 16,
-    width: '100%',
-    alignItems: 'center',
-  },
-  label: {
-    alignSelf: 'flex-start',
-    marginLeft: '10%',
-    color: 'white',
-    fontSize: 14,
-    fontWeight: '500',
-    marginBottom: 5,
-  },
-  input: {
-    width: '90%',
-    maxWidth: 340,
-    height: 55,
-    borderRadius: 23,
-    paddingHorizontal: 20,
-    backgroundColor: 'white',
-    color: 'black',
-    fontSize: 14,
-    fontWeight: '500',
-  },
-  signupButton: {
-    width: '70%',
-    maxWidth: 232,
-    height: 47,
-    marginVertical: 30,
-    backgroundColor: '#185216',
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: '700',
-  },
-  loginLinkContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  loginText: {
-    color: 'white',
-    fontSize: 14,
-    fontWeight: '500',
-  },
-  loginLink: {
-    color: '#2C35DE',
-    fontSize: 14,
-    fontWeight: '500',
-    textDecorationLine: 'underline',
-  },
-});
 
 export default SignUpScreen;
