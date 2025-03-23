@@ -7,6 +7,8 @@ import ElectionScreen from './src/screens/election';
 import LoginScreen from './src/screens/login';
 import HomeCapacitorScreen from './src/screens/homeC';
 import CreateVacancyScreen from './src/screens/createVac';
+import CreateVacancyScreenTwo from './src/screens/createVac2';
+import NotificationScreen from './src/screens/notifications';
 
 
 const Stack = createStackNavigator();
@@ -21,6 +23,8 @@ export default function App() {
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="homeC" component={HomeCapacitorScreen} />
         <Stack.Screen name="createVac" component={CreateVacancyScreen} />
+        <Stack.Screen name="createVac2" component={CreateVacancyScreenTwo} />
+        <Stack.Screen name="notifications" component={NotificationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,4 +1,3 @@
-// HomeCapacitorScreen.js
 import React from 'react';
 import {
   View,
@@ -13,6 +12,9 @@ import { FontAwesome } from '@expo/vector-icons';
 import styles from '../styles/homeCStyles'; // Importa los estilos desde el archivo separado
 
 const HomeCapacitorScreen = ({ navigation }) => {
+  // Depuración: Verifica si navigation está definido
+  console.log('Objeto de navegación:', navigation);
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#9fc5a0" barStyle="dark-content" />
@@ -68,7 +70,13 @@ const HomeCapacitorScreen = ({ navigation }) => {
 
         <TouchableOpacity
           style={styles.navItem}
-          onPress={() => navigation && navigation.navigate('Notifications')}
+          onPress={() => {
+            if (navigation) {
+              navigation.navigate('notifications');
+            } else {
+              console.error('El objeto de navegación es undefined');
+            }
+          }}
         >
           <FontAwesome name="bell" size={20} color="#000" style={styles.navIcon} />
           <Text style={styles.navText}>Notifications</Text>

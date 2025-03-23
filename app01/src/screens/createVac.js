@@ -93,7 +93,7 @@ const CreateVacancyScreen = ({ navigation }) => {
 
             <TouchableOpacity
               style={styles.btnNext}
-              onPress={() => navigation && navigation.navigate('CreateVacancy2')}
+              onPress={() => navigation && navigation.navigate('createVac2')}
             >
               <Text style={styles.btnNextText}>Next</Text>
             </TouchableOpacity>
