@@ -84,10 +84,13 @@ const HomeCapacitorScreen = ({ navigation }) => {
 
         <TouchableOpacity style={styles.navItem}>
           <FontAwesome name="search" size={20} color="#000" style={styles.navIcon} />
-          <Text style={styles.navText}>Favorites</Text>
+          <Text style={styles.navText}>Search</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.navItem}>
+        <TouchableOpacity 
+          style={styles.navItem}
+          onPress={() => navigation.navigate('profile')}
+        >
           <FontAwesome name="user" size={20} color="#000" style={styles.navIcon} />
           <Text style={styles.navText}>Profile</Text>
         </TouchableOpacity>

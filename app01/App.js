@@ -9,6 +9,7 @@ import HomeCapacitorScreen from './src/screens/homeC';
 import CreateVacancyScreen from './src/screens/createVac';
 import CreateVacancyScreenTwo from './src/screens/createVac2';
 import NotificationScreen from './src/screens/notifications';
+import ProfileScreen from './src/screens/profile';
 
 
 const Stack = createStackNavigator();
@@ -25,6 +26,7 @@ export default function App() {
         <Stack.Screen name="createVac" component={CreateVacancyScreen} />
         <Stack.Screen name="createVac2" component={CreateVacancyScreenTwo} />
         <Stack.Screen name="notifications" component={NotificationScreen} />
+        <Stack.Screen name="profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
