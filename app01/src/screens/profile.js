@@ -33,7 +33,7 @@ const COLORS = {
 
 const { width, height } = Dimensions.get('window');
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }) => {
   const insets = useSafeAreaInsets();
   const [comment, setComment] = useState('');
 
@@ -157,7 +157,10 @@ const ProfileScreen = () => {
 
       {/* Header/Top bar */}
       <View style={[styles.header, { paddingTop: insets.top > 0 ? 0 : 10 }]}>
-        <TouchableOpacity style={styles.headerButton}>
+        <TouchableOpacity 
+          style={styles.headerButton}
+          onPress={() => navigation.navigate('homeC')}
+        >
           <Icon name="arrow-left" size={20} color={COLORS.card} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Profile</Text>

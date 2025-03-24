@@ -29,9 +29,6 @@ const HomeCapacitorScreen = ({ navigation }) => {
         <View style={styles.profileIcon} />
       </View>
 
-      {/* Recommended Tag */}
-      <Text style={styles.recommendedTag}>you vacancies</Text>
-
       {/* Main Content */}
       <View style={styles.mainContent}>
         <Text style={styles.recommendationTitle}>
@@ -47,9 +44,6 @@ const HomeCapacitorScreen = ({ navigation }) => {
             </View>
             <Text style={styles.jobTitle}>Network Administrator</Text>
           </View>
-          <TouchableOpacity style={styles.seeDetails}>
-            <Text style={styles.seeDetailsText}>see details</Text>
-          </TouchableOpacity>
         </TouchableOpacity>
       </View>
 
