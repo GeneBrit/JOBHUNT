@@ -5,15 +5,12 @@ import Principal from './src/screens/principal';
 import SignUpScreen from './src/screens/signup';
 import ElectionScreen from './src/screens/election';
 import LoginScreen from './src/screens/login';
-import HomeCapacitorScreen from './src/screens/homeC';
-import CreateVacancyScreen from './src/screens/createVac';
 import CreateVacancyScreenTwo from './src/screens/createVac2';
 import NotificationScreen from './src/screens/notifications';
 import ProfileScreen from './src/screens/profile';
 import PreferencesScreen from './src/screens/preferences';
 import EducationScreen from './src/screens/education';
 import HomeWorkerScreen from './src/screens/homeP';
-
 
 const Stack = createStackNavigator();
 

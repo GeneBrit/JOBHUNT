@@ -73,3 +73,4 @@ const PrincipalScreen = ({ navigation }) => {
 };
 
 export default PrincipalScreen;
+
