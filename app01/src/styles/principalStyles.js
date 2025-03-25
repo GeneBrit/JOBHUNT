@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   signIn: {
-    color: 'white',
+    color: '#2C35DE',
     fontSize: 16,
     fontWeight: 'bold',
     textDecorationLine: 'underline',

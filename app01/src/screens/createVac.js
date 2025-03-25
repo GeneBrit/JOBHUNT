@@ -14,7 +14,7 @@ import {
   Platform,
 } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-import styles from '../styles/homeCStyles'; // Importa los estilos desde el archivo separado
+import styles from '../styles/createVacStyles'; // Importa los estilos desde el archivo separado
 
 const CreateVacancyScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions();
@@ -93,7 +93,7 @@ const CreateVacancyScreen = ({ navigation }) => {
 
             <TouchableOpacity
               style={styles.btnNext}
-              onPress={() => navigation && navigation.navigate('CreateVacancy2')}
+              onPress={() => navigation && navigation.navigate('createVac2')}
             >
               <Text style={styles.btnNextText}>Next</Text>
             </TouchableOpacity>

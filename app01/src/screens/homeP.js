@@ -11,7 +11,7 @@ import {
 import { FontAwesome } from '@expo/vector-icons';
 import styles from '../styles/homeCStyles'; // Importa los estilos desde el archivo separado
 
-const HomeCapacitorScreen = ({ navigation }) => {
+const HomeWorkerScreen = ({ navigation }) => {
   // Depuración: Verifica si navigation está definido
   console.log('Objeto de navegación:', navigation);
 
@@ -32,10 +32,13 @@ const HomeCapacitorScreen = ({ navigation }) => {
       {/* Main Content */}
       <View style={styles.mainContent}>
         <Text style={styles.recommendationTitle}>
-          Job vacancies{'\n'}
-          your offer{'\n'}
+          Welcome back, <Text style={styles.userName}>John!</Text>{'\n'}
         </Text>
-
+        <Text style={styles.subTitle}>
+          Check out these{'\n'}
+          <Text style={styles.highlightedText}>perfect matches</Text>{'\n'}
+          for your profile
+        </Text>
         <TouchableOpacity style={styles.jobCard}>
           <View style={styles.jobInfo}>
             <View style={styles.jobIcon}>
@@ -93,4 +96,4 @@ const HomeCapacitorScreen = ({ navigation }) => {
   );
 };
 
-export default HomeCapacitorScreen;
+export default HomeWorkerScreen;
