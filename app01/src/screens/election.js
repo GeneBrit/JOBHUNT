@@ -35,7 +35,7 @@ const ElectionScreen = ({ navigation }) => {
           <View style={styles.buttonsContainer}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation?.navigate('signup')}
+              onPress={() => navigation?.navigate('preferences')}
             >
               <View style={styles.buttonBackground}>
                 <Text style={styles.buttonText}>Search for a Job</Text>

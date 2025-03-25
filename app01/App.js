@@ -10,6 +10,9 @@ import CreateVacancyScreen from './src/screens/createVac';
 import CreateVacancyScreenTwo from './src/screens/createVac2';
 import NotificationScreen from './src/screens/notifications';
 import ProfileScreen from './src/screens/profile';
+import PreferencesScreen from './src/screens/preferences';
+import EducationScreen from './src/screens/education';
+import HomeWorkerScreen from './src/screens/homeP';
 
 
 const Stack = createStackNavigator();
@@ -27,6 +30,9 @@ export default function App() {
         <Stack.Screen name="createVac2" component={CreateVacancyScreenTwo} />
         <Stack.Screen name="notifications" component={NotificationScreen} />
         <Stack.Screen name="profile" component={ProfileScreen} />
+        <Stack.Screen name="preferences" component={PreferencesScreen} />
+        <Stack.Screen name="education" component={EducationScreen} />
+        <Stack.Screen name="homeP" component={HomeWorkerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

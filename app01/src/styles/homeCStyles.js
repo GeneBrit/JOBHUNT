@@ -49,7 +49,19 @@ const styles = StyleSheet.create({
     fontSize: 32,
     marginBottom: 20,
     textAlign: 'center',
-    lineHeight: 44,
+    lineHeight: 48,
+  },
+  subTitle: {
+    fontSize: 28, // Increased from 24 to make it more prominent
+    color: '#333',
+    lineHeight: 40, // Increased to maintain proper spacing
+    marginBottom: 15,
+    textAlign: 'center', // Added to center the text
+  },
+  highlightedText: {
+    fontSize: 30, // Add this new style
+    color: '#185216',
+    fontWeight: 'bold',
   },
   jobCard: {
     backgroundColor: 'white',
